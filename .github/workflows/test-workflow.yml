@@ -1,0 +1,20 @@
+name: Test workflow in different branch
+
+on:
+  pull_request:
+    branches: [ test-workflow ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    # runs-on: windows-latest
+    runs-on: linux
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    
+      # Runs a single command using the runners shell
+      - name: Debug - show environment
+        run: Get-ChildItem -Path Env:\
