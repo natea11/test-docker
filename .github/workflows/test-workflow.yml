@@ -2,7 +2,7 @@ name: Test workflow in different branch
 
 on:
   pull_request:
-    branches: [ test-workflow ]
+    branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
